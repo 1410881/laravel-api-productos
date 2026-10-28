@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('price', 8, 2); // Para precios
+            $table->decimal('price', 8, 2);
             $table->integer('stock')->default(0);
-            // Relación con categorías
             $table->foreignId('category_id')->constrained('categorias')->onDelete('cascade');
             $table->timestamps();
         });

@@ -14,7 +14,6 @@ class CategoriaRequest extends FormRequest
 
     public function rules(): array
     {
-        // Si es una actualización (PUT), ignoramos el ID actual en la regla unique
         $id = $this->route('categoria') ? $this->route('categoria')->id : null;
 
         return [

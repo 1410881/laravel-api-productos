@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->id(); // Crea la columna 'id' autoincremental
-            $table->string('nombre')->unique(); // Nombre de la categoría (Ej: "Tecnología")
-            $table->string('slug')->unique(); // Para URLs amigables (Ej: "tecnologia")
-            $table->text('descripcion')->nullable(); // Descripción opcional
-            $table->timestamps(); // Crea 'created_at' y 'updated_at'
+            $table->id();
+            $table->string('nombre')->unique();
+            $table->string('slug')->unique();
+            $table->text('descripcion')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -17,9 +17,9 @@ class ProductoController extends Controller
         ], 200);
     }
 
-    public function store(StoreProductoRequest $request) // <-- Usamos el Request
+    public function store(StoreProductoRequest $request)
     {
-        $producto = Producto::create($request->validated()); // <-- validated() solo trae lo que pasó la regla
+        $producto = Producto::create($request->validated());
 
         return response()->json([
             'success' => true,
@@ -38,7 +38,7 @@ class ProductoController extends Controller
         ], 200);
     }
 
-    public function update(StoreProductoRequest $request, $id) // <-- Reutilizamos el Request para actualizar
+    public function update(StoreProductoRequest $request, $id)
     {
         $producto = Producto::findOrFail($id);
         $producto->update($request->validated());

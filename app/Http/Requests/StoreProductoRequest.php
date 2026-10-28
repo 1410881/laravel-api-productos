@@ -8,7 +8,7 @@ class StoreProductoRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return true; // Permitimos que cualquiera haga la petición por ahora
+        return true;
     }
 
     public function rules(): array
@@ -22,7 +22,6 @@ class StoreProductoRequest extends FormRequest
         ];
     }
 
-    // Personalizamos los mensajes de error (opcional)
     public function messages(): array
     {
         return [
